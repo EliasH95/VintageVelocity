@@ -1,0 +1,28 @@
+h1{
+    font-family:BodyFont;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+@font-face {
+    font-family: HeaderFont;
+    src: url("/VintageVelocity/fonts/Antonio-Regular.ttf");
+}
+
+@font-face {
+    font-family: BodyFont;
+    src: url("/VintageVelocity/fonts/Poppins-Regular.ttf");
+}
+
+.menuP{
+    margin: 20px;
+    font-family: BodyFont;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.menuP:hover{
+    background-color: #f2f2f2;
+}
