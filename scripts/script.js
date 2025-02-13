@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const homeHeader = document.getElementById("homeHeader");
 
     homeHeader.addEventListener("click", (event) => {
-        window.location = "/VintageVelocity/html/home.html";
+        window.location = "/VintageVelocity/html/index.html";
     });
 
     const aboutHeader = document.getElementById("aboutHeader")
