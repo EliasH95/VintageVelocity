@@ -7,19 +7,19 @@ document.addEventListener("DOMContentLoaded",()=>{
     const membersHeader = document.getElementById("membersHeader");
 
     membersHeader.addEventListener("click", (event) => {
-        window.location = "/VintageVelocity/html/members.html";
+        window.location = "/VintageVelocity/docs/members.html";
     });
 
     const homeHeader = document.getElementById("homeHeader");
 
     homeHeader.addEventListener("click", (event) => {
-        window.location = "/VintageVelocity/html/index.html";
+        window.location = "/VintageVelocity/docs/index.html";
     });
 
     const aboutHeader = document.getElementById("aboutHeader")
 
     aboutHeader.addEventListener("click",(event) =>{
-        window.location = "/VintageVelocity/html/about.html";
+        window.location = "/VintageVelocity/docs/about.html";
     })
     console.log(aboutHeader);
 
