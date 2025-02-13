@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const membersHeader = document.getElementById("membersHeader");
 
     membersHeader.addEventListener("click", (event) => {
-        window.location = " /members.html";
+        window.location = "/members.html";
     });
 
     const homeHeader = document.getElementById("homeHeader");
