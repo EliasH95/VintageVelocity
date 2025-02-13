@@ -7,33 +7,33 @@ document.addEventListener("DOMContentLoaded",()=>{
     const membersHeader = document.getElementById("membersHeader");
 
     membersHeader.addEventListener("click", (event) => {
-        window.location = "/html/members.html";
+        window.location = "/VintageVelocity/html/members.html";
     });
 
     const homeHeader = document.getElementById("homeHeader");
 
     homeHeader.addEventListener("click", (event) => {
-        window.location = "/html/home.html";
+        window.location = "/VintageVelocity/html/home.html";
     });
 
     const aboutHeader = document.getElementById("aboutHeader")
 
     aboutHeader.addEventListener("click",(event) =>{
-        window.location = "/html/about.html";
+        window.location = "/VintageVelocity/html/about.html";
     })
     console.log(aboutHeader);
 
     const impressumHeader = document.getElementById("impressumHeader");
 
     impressumHeader.addEventListener("click",(event) =>{
-        window.location = "/html/impressum.html"
+        window.location = "/VintageVelocity/html/impressum.html"
     }
     )
 
     const vehiclesHeader = document.getElementById("vehiclesHeader");
     
     vehiclesHeader.addEventListener("click",(event) =>{
-        window.location = "/html/vehicles.html"
+        window.location = "/VintageVelocity/html/vehicles.html"
     }
     )
 

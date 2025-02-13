@@ -1,7 +1,7 @@
 {"members":
  [
     {
-        "ImgPath":"/imgs/elias.jpg" ,
+        "ImgPath":"/VintageVelocity/imgs/elias.jpg" ,
         "Name": "LADITSCH",
         "Birthdate": "05.09.2007",
         "Nationality": "Österreich",
@@ -9,7 +9,7 @@
         "Role": "Vorstand | Gründungsmitglied"
     },
     {
-        "ImgPath": "/imgs/Lasse.jpg",
+        "ImgPath": "/VintageVelocity/imgs/Lasse.jpg",
         "Name": "LASSE",
         "Birthdate": "04.17.2007",
         "Nationality": "Deutschland",
@@ -17,7 +17,7 @@
         "Role": "Vorstand | Gründungsmitglied"
     },
     {
-        "ImgPath": "/imgs/gregor.png",
+        "ImgPath": "/VintageVelocity/imgs/gregor.png",
         "Name": "GREGOR" ,
         "Birthdate": "10.12.2009",
         "Nationality": "Österreich",
@@ -25,7 +25,7 @@
         "Role": "Mitglied"
     },
     {
-        "ImgPath": "/imgs/stuhli.jpg",
+        "ImgPath": "/VintageVelocity/imgs/stuhli.jpg",
         "Name": "STUHLI",
         "Birthdate": "01.01.2002",
         "Nationality": "Österreich",
