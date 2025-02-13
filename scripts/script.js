@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 async function loadMembers(){
-    const response = await fetch("/members.json");
+    const response = await fetch("/VintageVelocity/members.json");
     const json = await response.json();
     return json;
 }
