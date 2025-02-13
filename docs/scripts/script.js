@@ -7,19 +7,19 @@ document.addEventListener("DOMContentLoaded",()=>{
     const membersHeader = document.getElementById("membersHeader");
 
     membersHeader.addEventListener("click", (event) => {
-        window.location = "/docs/members.html";
+        window.location = " /members.html";
     });
 
     const homeHeader = document.getElementById("homeHeader");
 
     homeHeader.addEventListener("click", (event) => {
-        window.location = "/docs/index.html";
+        window.location = "/index.html";
     });
 
     const aboutHeader = document.getElementById("aboutHeader")
 
     aboutHeader.addEventListener("click",(event) =>{
-        window.location = "s/docs/about.html";
+        window.location = "/about.html";
     })
     console.log(aboutHeader);
 
