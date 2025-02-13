@@ -7,21 +7,35 @@ document.addEventListener("DOMContentLoaded",()=>{
     const membersHeader = document.getElementById("membersHeader");
 
     membersHeader.addEventListener("click", (event) => {
-        window.location = "/VintageVelocity/html/members.html";
+        window.location = "/html/members.html";
     });
 
     const homeHeader = document.getElementById("homeHeader");
 
     homeHeader.addEventListener("click", (event) => {
-        window.location = "/VintageVelocity/html/home.html";
+        window.location = "/html/home.html";
     });
 
     const aboutHeader = document.getElementById("aboutHeader")
 
     aboutHeader.addEventListener("click",(event) =>{
-        window.location = "/VintageVelocity/html/about.html";
+        window.location = "/html/about.html";
     })
     console.log(aboutHeader);
+
+    const impressumHeader = document.getElementById("impressumHeader");
+
+    impressumHeader.addEventListener("click",(event) =>{
+        window.location = "/html/impressum.html"
+    }
+    )
+
+    const vehiclesHeader = document.getElementById("vehiclesHeader");
+    
+    vehiclesHeader.addEventListener("click",(event) =>{
+        window.location = "/html/vehicles.html"
+    }
+    )
 
     if(window.location.href.includes("members")){
         vorstandDiv = document.getElementById("executivesDiv");
@@ -31,7 +45,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 async function loadMembers(){
-    const response = await fetch("/VintageVelocity/members.json");
+    const response = await fetch("/members.json");
     const json = await response.json();
     return json;
 }
