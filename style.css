@@ -82,3 +82,22 @@ span{
     color: white;
     display: none;
 }
+.newsDiv{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.singularNews{
+    width: 600px;
+    height: 600px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.singularNews img {
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+}
+li{
+    font-family: BodyFont;
+}
