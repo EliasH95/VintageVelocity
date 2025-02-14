@@ -4,6 +4,10 @@ let vorstandDiv;
 let regularMemberDiv;
 
 document.addEventListener("DOMContentLoaded",()=>{
+
+    if(window.location.href.includes("index")){
+        buildNews();
+    }
     const membersHeader = document.getElementById("membersHeader");
 
     membersHeader.addEventListener("click", (event) => {
@@ -14,6 +18,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     homeHeader.addEventListener("click", (event) => {
         window.location = "index.html";
+        buildNews();
     });
 
     const aboutHeader = document.getElementById("aboutHeader")
@@ -50,10 +55,47 @@ async function loadMembers(){
     return json;
 }
 
+async function loadNews(){
+    const response = await fetch("news.json");
+    const json = await response.json();
+    return json;
+}
+
+async function buildNews(){
+    const completeNewsDiv = document.getElementById("newsDiv");
+    console.log(completeNewsDiv);
+    const news = await loadNews();
+    Array.from(news.news).forEach(news =>{
+        const newsDiv = document.createElement("div");
+        newsDiv.className = "singularNews";
+
+        const newsImg = document.createElement("img");
+        newsImg.src = news.ImgPath;
+        newsDiv.appendChild(newsImg);
+    
+        const newsTitle = document.createElement("h3");
+        newsTitle.textContent = news.Title;
+        newsDiv.appendChild(newsTitle);
+
+        const newsUl = document.createElement("ul");
+
+        Array.from(String(news.Description).split(";")).forEach(desc =>{
+            console.log(news.Description);
+            const newsLi = document.createElement("li");
+            console.log(desc);
+            newsLi.textContent = desc;
+            newsUl.appendChild(newsLi);
+        })
+
+        newsDiv.append(newsUl);
+
+        completeNewsDiv.appendChild(newsDiv);
+    })
+}
+
 async function buildMemberDivs(){
     const members = await loadMembers();
     console.log(members)
-    console.log(Array.from(members.members));
     Array.from(members.members).forEach(member => {
         const memberDiv = document.createElement("div");
 
