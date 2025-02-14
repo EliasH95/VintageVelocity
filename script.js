@@ -7,33 +7,33 @@ document.addEventListener("DOMContentLoaded",()=>{
     const membersHeader = document.getElementById("membersHeader");
 
     membersHeader.addEventListener("click", (event) => {
-        window.location = "/VintageVelocity/html/members.html";
+        window.location = "members.html";
     });
 
     const homeHeader = document.getElementById("homeHeader");
 
     homeHeader.addEventListener("click", (event) => {
-        window.location = "/VintageVelocity/docs/index.html";
+        window.location = "index.html";
     });
 
     const aboutHeader = document.getElementById("aboutHeader")
 
     aboutHeader.addEventListener("click",(event) =>{
-        window.location = "/VintageVelocity/html/about.html";
+        window.location = "about.html";
     })
     console.log(aboutHeader);
 
     const impressumHeader = document.getElementById("impressumHeader");
 
     impressumHeader.addEventListener("click",(event) =>{
-        window.location = "/VintageVelocity/html/impressum.html"
+        window.location = "impressum.html"
     }
     )
 
     const vehiclesHeader = document.getElementById("vehiclesHeader");
     
     vehiclesHeader.addEventListener("click",(event) =>{
-        window.location = "/VintageVelocity/html/vehicles.html"
+        window.location = "vehicles.html"
     }
     )
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 async function loadMembers(){
-    const response = await fetch("/VintageVelocity/members.json");
+    const response = await fetch("members.json");
     const json = await response.json();
     return json;
 }

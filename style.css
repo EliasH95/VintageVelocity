@@ -26,12 +26,12 @@ p{
 
 @font-face {
     font-family: HeaderFont;
-    src: url("/VintageVelocity/fonts/Antonio-Regular.ttf");
+    src: url("Antonio-Regular.ttf");
 }
 
 @font-face {
     font-family: BodyFont;
-    src: url("/VintageVelocity/fonts/Poppins-Regular.ttf");
+    src: url("/Poppins-Regular.ttf");
 }
 
 .menuP{
