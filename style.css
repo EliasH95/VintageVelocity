@@ -31,7 +31,7 @@ p{
 
 @font-face {
     font-family: BodyFont;
-    src: url("/Poppins-Regular.ttf");
+    src: url("Poppins-Regular.ttf");
 }
 
 .menuP{
