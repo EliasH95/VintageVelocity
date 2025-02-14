@@ -62,6 +62,14 @@ async function buildMemberDivs(){
         img.style.height = "350px";
         memberDiv.appendChild(img);
 
+        const tiktokLink = document.createElement("span");
+        tiktokLink.textContent = "Zum Garagen Video";
+        tiktokLink.className = "tiktokLink";
+        memberDiv.addEventListener("click",()=>{
+            window.location.href = member.TiktokLink;
+        })
+        memberDiv.appendChild(tiktokLink);
+
         const nameP = document.createElement("p");
             nameP.textContent = member.Name;
             nameP.style.fontWeight = "bold";
