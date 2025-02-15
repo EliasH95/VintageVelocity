@@ -1,0 +1,33 @@
+{
+    "vehicles":
+    [
+        {
+            "Owner": "Laditsch",
+            "Model": "Puch AX40 City",
+            "ConstYear": "1982",
+            "ImgPath": "laditsch_puch-City.png",
+            "Type": "Moped"
+        },
+        {
+            "Owner": "Gregor",
+            "Model": "KTM Ponny 2 Super 4",
+            "ConstYear": "19xx",
+            "ImgPath": "gregor_ponny.png",
+            "Type": "Moped"
+        },
+        {
+            "Owner": "Lasse",
+            "Model": "KTM Ponny 2 Super 4",
+            "ConstYear": "19xx",
+            "ImgPath": "lasse_ponny.png",
+            "Type": "Moped"
+        },
+        {
+            "Owner": "Lasse",
+            "Model": "Zündapp ZD40",
+            "ConstYear": "1965",
+            "ImgPath": "lasse_zündapp-ZD40.png",
+            "Type": "Moped"
+        }
+    ]
+}

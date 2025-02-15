@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     if(window.location.href.includes("index")){
         buildNews();
     }
+    if(window.location.href.includes("vehicles")){
+        buildVehicles();
+    }
     const membersHeader = document.getElementById("membersHeader");
 
     membersHeader.addEventListener("click", (event) => {
@@ -39,6 +42,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     
     vehiclesHeader.addEventListener("click",(event) =>{
         window.location = "vehicles.html"
+        buildVehicles();
     }
     )
 
@@ -49,22 +53,67 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
 });
 
-async function loadMembers(){
-    const response = await fetch("members.json");
+async function loadJson(path){
+    const response = await fetch(path);
     const json = await response.json();
     return json;
 }
 
-async function loadNews(){
-    const response = await fetch("news.json");
-    const json = await response.json();
-    return json;
+async function buildVehicles(){
+    const mopedDiv = document.getElementById("mopedDiv");
+    const carDiv = document.getElementById("carDiv");
+    const restVehiclesDiv = document.getElementById("restVehiclesDiv");
+
+    const mopedH2 = document.getElementById("mopedsH2");
+    const carH2 = document.getElementById("carH2");
+    const restH2 = document.getElementById("restH2");
+
+
+    const vehicles = await loadJson("vehicles.json");
+
+    Array.from(vehicles.vehicles).forEach(vehicle =>{
+        const vehicleDiv = document.createElement("div");
+        vehicleDiv.className = "vehicleDiv";
+
+        const vehicleImg = document.createElement("img");
+        vehicleImg.src = vehicle.ImgPath;;
+        vehicleDiv.appendChild(vehicleImg);
+        
+        const vehicleOwner = document.createElement("p");
+        vehicleOwner.textContent = vehicle.Owner;
+        vehicleDiv.appendChild(vehicleOwner);
+
+        const vehicleName = document.createElement("p");
+        vehicleName.textContent = vehicle.Model;
+        vehicleDiv.appendChild(vehicleName);
+
+        const vehicleConstYear = document.createElement("p");
+        vehicleConstYear.textContent = vehicle.ConstYear;
+        vehicleDiv.appendChild(vehicleConstYear);
+
+        if(vehicle.Type.includes("Moped")){
+            mopedDiv.appendChild(vehicleDiv);
+            mopedDiv.style.display = "flex";
+            mopedH2.style.display = "flex";
+        }
+        else if(vehicle.Type.includes("Car")){
+            carDiv.appendChild(vehicleDiv);
+            carDiv.style.display = "flex";
+            carH2.style.display = "flex";
+        }
+        else{
+            restVehiclesDiv.appendChild(vehicleDiv);
+            restVehiclesDiv.style.display = "flex";
+            restH2.style.display = "flex";
+        }
+    })
 }
+
 
 async function buildNews(){
     const completeNewsDiv = document.getElementById("newsDiv");
     console.log(completeNewsDiv);
-    const news = await loadNews();
+    const news = await loadJson("news.json");
     Array.from(news.news).forEach(news =>{
         const newsDiv = document.createElement("div");
         newsDiv.className = "singularNews";
@@ -77,24 +126,22 @@ async function buildNews(){
         newsTitle.textContent = news.Title;
         newsDiv.appendChild(newsTitle);
 
-        const newsUl = document.createElement("ul");
 
         Array.from(String(news.Description).split(";")).forEach(desc =>{
             console.log(news.Description);
-            const newsLi = document.createElement("li");
+            const newsP = document.createElement("p");
             console.log(desc);
-            newsLi.textContent = desc;
-            newsUl.appendChild(newsLi);
+            newsP.textContent = desc;
+            newsDiv.appendChild(newsP);
         })
 
-        newsDiv.append(newsUl);
 
         completeNewsDiv.appendChild(newsDiv);
     })
 }
 
 async function buildMemberDivs(){
-    const members = await loadMembers();
+    const members = await loadJson("members.json");
     console.log(members)
     Array.from(members.members).forEach(member => {
         const memberDiv = document.createElement("div");
@@ -105,7 +152,7 @@ async function buildMemberDivs(){
         memberDiv.appendChild(img);
 
         const tiktokLink = document.createElement("span");
-        tiktokLink.textContent = "Zum Garagen Video";
+        tiktokLink.textContent = "Zum Vorstellungsvideo";
         tiktokLink.className = "tiktokLink";
         memberDiv.addEventListener("click",()=>{
             window.location.href = member.TiktokLink;
