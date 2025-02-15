@@ -162,7 +162,9 @@ async function buildMemberDivs(){
 
         const ageP = document.createElement("p");
             const now = new Date();
-            const birthdate = new Date(member.Birthdate);
+            const parts = String(member.Birthdate).split("-");
+            const birthdate = new Date(parseInt(parts[2]),parseInt(parts[0]),parseInt(parts[1]))
+            console.log(birthdate);
             let age = now.getFullYear() - birthdate.getFullYear();
             if (
                 now.getMonth() < birthdate.getMonth() ||

@@ -3,7 +3,7 @@
     {
         "ImgPath":"elias.jpg" ,
         "Name": "LADITSCH",
-        "Birthdate": "05-09-2007",
+        "Birthdate": "04-09-2007",
         "Nationality": "Österreich",
         "Joined": "Gründung 2024",
         "Role": "Vorstand | Gründungsmitglied",
@@ -12,7 +12,7 @@
     {
         "ImgPath": "Lasse.jpg",
         "Name": "LASSE",
-        "Birthdate": "04-17-2007",
+        "Birthdate": "03-17-2007",
         "Nationality": "Deutschland",
         "Joined": "Gründung 2024",
         "Role": "Vorstand | Gründungsmitglied",
@@ -21,7 +21,7 @@
     {
         "ImgPath": "gregor.png",
         "Name": "GREGOR" ,
-        "Birthdate": "10-12-2009",
+        "Birthdate": "9-12-2009",
         "Nationality": "Österreich",
         "Joined": "April 2024",
         "Role": "Mitglied",
@@ -30,7 +30,7 @@
     {
         "ImgPath": "stuhli.jpg",
         "Name": "STUHLI",
-        "Birthdate": "01-26-2004",
+        "Birthdate": "00-26-2004",
         "Nationality": "Österreich",
         "Joined": "Dezember 2024",
         "Role": "Mitglied",
