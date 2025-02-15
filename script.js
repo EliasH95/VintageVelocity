@@ -5,9 +5,10 @@ let regularMemberDiv;
 
 document.addEventListener("DOMContentLoaded",()=>{
 
-    if(window.location.href.includes("index")){
-        buildNews();
-    }
+    //yes, this throws an error when the page is not the index.html, but otherwise,
+    //the fucking news won't be loaded when the site is opened
+    buildNews();
+
     if(window.location.href.includes("vehicles")){
         buildVehicles();
     }
@@ -29,7 +30,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     aboutHeader.addEventListener("click",(event) =>{
         window.location = "about.html";
     })
-    console.log(aboutHeader);
 
     const impressumHeader = document.getElementById("impressumHeader");
 
@@ -112,7 +112,6 @@ async function buildVehicles(){
 
 async function buildNews(){
     const completeNewsDiv = document.getElementById("newsDiv");
-    console.log(completeNewsDiv);
     const news = await loadJson("news.json");
     Array.from(news.news).forEach(news =>{
         const newsDiv = document.createElement("div");
@@ -128,9 +127,7 @@ async function buildNews(){
 
 
         Array.from(String(news.Description).split(";")).forEach(desc =>{
-            console.log(news.Description);
             const newsP = document.createElement("p");
-            console.log(desc);
             newsP.textContent = desc;
             newsDiv.appendChild(newsP);
         })
@@ -142,7 +139,6 @@ async function buildNews(){
 
 async function buildMemberDivs(){
     const members = await loadJson("members.json");
-    console.log(members)
     Array.from(members.members).forEach(member => {
         const memberDiv = document.createElement("div");
 
@@ -167,7 +163,6 @@ async function buildMemberDivs(){
         const ageP = document.createElement("p");
             const now = new Date();
             const birthdate = new Date(member.Birthdate);
-            console.log(birthdate);
             let age = now.getFullYear() - birthdate.getFullYear();
             if (
                 now.getMonth() < birthdate.getMonth() ||
@@ -192,7 +187,6 @@ async function buildMemberDivs(){
             //memberDiv.appendChild(roleP);
 
         memberDiv.className = "memberDiv";
-        console.log(memberDiv);
         String(member.Role).includes("Vorstand") ? 
             vorstandDiv.append(memberDiv) :
              regularMemberDiv.append(memberDiv);
