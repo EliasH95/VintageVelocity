@@ -11,14 +11,14 @@
         {
             "Owner": "Gregor",
             "Model": "KTM Ponny 2 Super 4",
-            "ConstYear": "19xx",
+            "ConstYear": "1968",
             "ImgPath": "gregor_ponny.png",
             "Type": "Moped"
         },
         {
             "Owner": "Lasse",
             "Model": "KTM Ponny 2 Super 4",
-            "ConstYear": "19xx",
+            "ConstYear": "1969",
             "ImgPath": "lasse_ponny.png",
             "Type": "Moped"
         },
@@ -27,6 +27,13 @@
             "Model": "Zündapp ZD40",
             "ConstYear": "1965",
             "ImgPath": "lasse_zündapp-ZD40.png",
+            "Type": "Moped"
+        },
+        {
+            "Owner": "Stuhli",
+            "Model": "Puch MV50S",
+            "ConstYear": "1971",
+            "ImgPath": "stuhli_mv50s.png",
             "Type": "Moped"
         }
     ]
