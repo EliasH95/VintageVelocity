@@ -76,10 +76,10 @@ span{
 .memberDiv:hover{
     background-color: lightgray;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: 0.5s;
-    margin-top: -10px;
     cursor: pointer;
+    transition: 0.5s;
     color: lightgray;
+    transform: scale(1.05);
 }
 .memberDiv:hover .tiktokLink{
     display: block;
@@ -87,6 +87,11 @@ span{
 }
 .memberDiv .img{
     width: 100%;
+}
+.memberDiv:hover img{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
 }
 .vehicleDiv{
     border-style:solid; 
@@ -99,6 +104,8 @@ span{
     text-align: center;
     transition: 0.5s;
     max-width: 400px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+
 }
 .vehicleDiv img{
     width: 100%;
@@ -113,13 +120,17 @@ span{
     flex-direction: row;
 }
 .singularNews{
-    width: 600px;
-    height: 600px;
+    max-width: fit-content;
+    max-height: fit-content;
     margin-left: 50px;
     margin-right: 50px;
     align-items: center;
     justify-content: center;
     margin-bottom: 25px;
+}
+.singularNews img{
+    max-width:100%;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* More visible shadow */
 }
 .singularNews img {
     width: 100%;
