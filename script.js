@@ -65,7 +65,7 @@ async function buildVehicles(){
     const restVehiclesDiv = document.getElementById("restVehiclesDiv");
 
     const mopedH2 = document.getElementById("mopedsH2");
-    const carH2 = document.getElementById("carH2");
+    const carH2 = document.getElementById("carsH2");
     const restH2 = document.getElementById("restH2");
 
 

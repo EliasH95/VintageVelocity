@@ -120,22 +120,21 @@ span{
     flex-direction: row;
 }
 .singularNews{
-    max-width: fit-content;
-    max-height: fit-content;
-    margin-left: 50px;
-    margin-right: 50px;
+    border-style:solid; 
+    border-radius: 10px; 
+    border-width: 2px;
+    padding: 10px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
+    margin: 25px;
+    text-align: center;
+    transition: 0.5s;
+    max-width: 600px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
-.singularNews img{
-    max-width:100%;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* More visible shadow */
-}
+
 .singularNews img {
     width: 100%;
-    border-style: solid;
-    border-width: 2px;
 }
 li{
     font-family: BodyFont;
