@@ -35,7 +35,13 @@
             "ConstYear": "1971",
             "ImgPath": "stuhli_mv50s.png",
             "Type": "Moped"
+        },
+        {
+        "Owner": "Stuhli",
+        "Model": "Honda CB450S PC17",
+        "ConstYear": "1988",
+        "ImgPath": "stuhli_honda-450.jpg",
+        "Type": "Moped"
         }
-       
     ]
 }
