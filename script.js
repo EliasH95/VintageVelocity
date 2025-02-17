@@ -9,16 +9,19 @@ document.addEventListener("DOMContentLoaded",()=>{
     //the fucking news won't be loaded when the site is opened
     buildNews();
 
-    switchColorMode(localStorage.getItem("currentColor"));
-    localStorage.getItem("currentColor").includes("black") ? switchColorMode("white") : switchColorMode("black");
 
-    let currentColor = document.getElementById("homeHeader").style.color;
-    console.log(currentColor)
+
+    switchColorMode(localStorage.getItem("currentColor"));
+    if(localStorage.getItem("currentColor") != null){
+        localStorage.getItem("currentColor").includes("black") ? switchColorMode("black") : switchColorMode("white");
+    }
+    
+
 
     document.getElementById("darkModeButton").addEventListener("click", (event) =>{
-        currentColor = switchColorMode(localStorage.getItem("currentColor"));
-        localStorage.setItem("currentColor",currentColor);
-        console.log("IN EVENT LISTENER:" + currentColor);
+        switchColorMode(localStorage.getItem("currentColor"));
+        console.log(localStorage.getItem("currentColor"));
+
     })
 
     if(window.location.href.includes("vehicles")){
@@ -75,9 +78,7 @@ function switchColorMode(currentColor){
         document.getElementById("darkModeButton").style.color = "white";
         document.getElementById("darkModeButton").style.borderColor = "white";
         document.getElementById("darkModeButton").textContent = "Lightmode";
-
-
-        return "black";
+        localStorage.setItem("currentColor","black");
     }
     else if(currentColor.includes("black")){
          document.body.style.background = "white";
@@ -87,8 +88,7 @@ function switchColorMode(currentColor){
          document.getElementById("darkModeButton").style.color = "black";
          document.getElementById("darkModeButton").style.borderColor = "black";
          document.getElementById("darkModeButton").textContent = "Darkmode";
-
-         return "white";
+         localStorage.setItem("currentColor","white");
     }
     
 }
