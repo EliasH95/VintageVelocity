@@ -12,18 +12,19 @@ document.addEventListener("DOMContentLoaded",()=>{
     console.log(localStorage.getItem("currentColor"));
 
     if(localStorage.getItem("currentColor") != null){
-        localStorage.getItem("currentColor").includes("black") ? switchColorMode("black") : switchColorMode("white");
+        localStorage.getItem("currentColor").includes("white") ? switchColorMode("black") : switchColorMode("white");
     }
 
     document.getElementById("darkModeButton").addEventListener("click", (event) =>{
         if(localStorage.getItem("currentColor") != null){
-            switchColorMode(localStorage.getItem("currentColor"));
+            localStorage.getItem("currentColor").includes("black") ? switchColorMode("black") : switchColorMode("white");        
+            console.log("tesd");
         }
         else{
             switchColorMode(document.getElementById("homeHeader").style.color);
+            console.log("desd")
         }
         console.log(localStorage.getItem("currentColor"));
-
     })
 
     if(window.location.href.includes("vehicles")){
