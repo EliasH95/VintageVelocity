@@ -16,7 +16,12 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
 
     document.getElementById("darkModeButton").addEventListener("click", (event) =>{
-        switchColorMode(localStorage.getItem("currentColor"));
+        if(localStorage.getItem("currentColor") != null){
+            switchColorMode(localStorage.getItem("currentColor"));
+        }
+        else{
+            switchColorMode(document.getElementById("homeHeader").style.color);
+        }
         console.log(localStorage.getItem("currentColor"));
 
     })
