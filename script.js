@@ -9,14 +9,12 @@ document.addEventListener("DOMContentLoaded",()=>{
     //the fucking news won't be loaded when the site is opened
     buildNews();
 
-
+    console.log(localStorage.getItem("currentColor"));
 
     switchColorMode(localStorage.getItem("currentColor"));
     if(localStorage.getItem("currentColor") != null){
         localStorage.getItem("currentColor").includes("black") ? switchColorMode("black") : switchColorMode("white");
     }
-    
-
 
     document.getElementById("darkModeButton").addEventListener("click", (event) =>{
         switchColorMode(localStorage.getItem("currentColor"));
@@ -84,7 +82,7 @@ function switchColorMode(currentColor){
          document.body.style.background = "white";
          document.body.style.color = "black";
          document.getElementById("homeHeader").style.color = "black";
-         document.getElementById("logoBig").src = "logo.png";
+         document.getElementById("logoBig").src = "logo.PNG";
          document.getElementById("darkModeButton").style.color = "black";
          document.getElementById("darkModeButton").style.borderColor = "black";
          document.getElementById("darkModeButton").textContent = "Darkmode";
