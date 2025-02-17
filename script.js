@@ -9,6 +9,18 @@ document.addEventListener("DOMContentLoaded",()=>{
     //the fucking news won't be loaded when the site is opened
     buildNews();
 
+    switchColorMode(localStorage.getItem("currentColor"));
+    localStorage.getItem("currentColor").includes("black") ? switchColorMode("white") : switchColorMode("black");
+
+    let currentColor = document.getElementById("homeHeader").style.color;
+    console.log(currentColor)
+
+    document.getElementById("darkModeButton").addEventListener("click", (event) =>{
+        currentColor = switchColorMode(localStorage.getItem("currentColor"));
+        localStorage.setItem("currentColor",currentColor);
+        console.log("IN EVENT LISTENER:" + currentColor);
+    })
+
     if(window.location.href.includes("vehicles")){
         buildVehicles();
     }
@@ -52,6 +64,34 @@ document.addEventListener("DOMContentLoaded",()=>{
         buildMemberDivs();
     }
 });
+
+function switchColorMode(currentColor){
+    document.body.style.transition = "0.4s"
+    if(currentColor.includes("white")){
+        document.body.style.background = "black";
+        document.getElementById("homeHeader").style.color = "white";
+        document.body.style.color = "white";
+        document.getElementById("logoBig").src = "logo_white.png";
+        document.getElementById("darkModeButton").style.color = "white";
+        document.getElementById("darkModeButton").style.borderColor = "white";
+        document.getElementById("darkModeButton").textContent = "Lightmode";
+
+
+        return "black";
+    }
+    else if(currentColor.includes("black")){
+         document.body.style.background = "white";
+         document.body.style.color = "black";
+         document.getElementById("homeHeader").style.color = "black";
+         document.getElementById("logoBig").src = "logo.png";
+         document.getElementById("darkModeButton").style.color = "black";
+         document.getElementById("darkModeButton").style.borderColor = "black";
+         document.getElementById("darkModeButton").textContent = "Darkmode";
+
+         return "white";
+    }
+    
+}
 
 async function loadJson(path){
     const response = await fetch(path);

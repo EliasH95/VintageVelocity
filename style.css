@@ -38,6 +38,13 @@ span{
     display: flex;
     justify-content: center;
 }
+button{
+    font-family:BodyFont;
+    display: flex;
+    justify-content: center;
+    background-color:transparent;
+    border-style: solid;
+}
 
 @font-face {
     font-family: HeaderFont;

@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="imagine/png" href="logoNoText.png"/>
     <title>Mitglieder</title>
+    <button id="darkModeButton">knopf</button>
+
 </head>
 <body style="align-items: center;">
     <link href='style.css' rel="stylesheet"></link>
     <script src="script.js"></script>
 
     <div style="justify-content: center; align-items: center; align-self: center; display: flex; border-bottom-style: solid;">
-        <img src="logo.PNG" alt="" width="100%" style="max-width: 500px;">
+        <img id="logoBig" src="logo.PNG" alt="" width="100%" style="max-width: 500px;">
     </div>
 
     <div style="display: flex; justify-content: center; align-items: center; align-self: center; border-bottom-style: solid; flex-wrap: wrap;">
@@ -22,11 +24,11 @@
         <p class="menuP" id="impressumHeader">Impressum</p>
     </div>
     <h1 style="padding-bottom: 15px;">MITGLIEDER</h1>
-    <div id="memberDiv" style="transition: 5s;">
-        <h2 style="transition: 5s;">VORSTAND</h2>
+    <div id="memberDiv" >
+        <h2>VORSTAND</h2>
         <div id="executivesDiv" style="margin-top: 50px; justify-content: center; align-items: center; align-self: center; display: flex;flex-wrap:wrap;" >
         </div>
-        <h2 style="transition: 5s;">MITGLIEDER</h2>
+        <h2>MITGLIEDER</h2>
         <div id="regularMembersDiv" style="margin-top: 50px; justify-content: center; align-items: center; align-self: center; display: flex; flex-wrap:wrap;" >
         </div>
     </div>
