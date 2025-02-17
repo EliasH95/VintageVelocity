@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     console.log(localStorage.getItem("currentColor"));
 
-    switchColorMode(localStorage.getItem("currentColor"));
+    //switchColorMode(localStorage.getItem("currentColor"));
     if(localStorage.getItem("currentColor") != null){
         localStorage.getItem("currentColor").includes("black") ? switchColorMode("black") : switchColorMode("white");
     }
