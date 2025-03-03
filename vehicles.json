@@ -42,13 +42,6 @@
         "ConstYear": "1988",
         "ImgPath": "stuhli_honda-450.jpg",
         "Type": "Moped"
-        },
-        {
-            "Owner": "Laditsch",
-            "Model": "In Erinnerung: Manner Mobil",
-            "ConstYear": "2007",
-            "ImgPath": "laditsch_manner-mobil.png",
-            "Type": "Moped"
-            }
+        }
     ]
 }
