@@ -3,12 +3,15 @@
 let vorstandDiv;
 let regularMemberDiv;
 
+
+
 document.addEventListener("DOMContentLoaded",()=>{
 
+    buildNews();
+    
     //yes, this throws an error when the page is not the index.html, but otherwise,
     //the fucking news won't be loaded when the site is opened
-    buildNews();
-
+  
     console.log(localStorage.getItem("currentColor"));
 
     if(localStorage.getItem("currentColor") != null){
@@ -18,11 +21,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     document.getElementById("darkModeButton").addEventListener("click", (event) =>{
         if(localStorage.getItem("currentColor") != null){
             localStorage.getItem("currentColor").includes("black") ? switchColorMode("black") : switchColorMode("white");        
-            console.log("tesd");
         }
         else{
-            switchColorMode(document.getElementById("homeHeader").style.color);
-            console.log("desd")
+            document.getElementById("homeHeader").style.color.includes("black") ? switchColorMode("white") : switchColorMode("black");
+            console.log("desd2")
         }
         console.log(localStorage.getItem("currentColor"));
     })
@@ -80,7 +82,7 @@ function switchColorMode(currentColor){
         document.getElementById("logoBig").src = "logo_white.png";
         document.getElementById("darkModeButton").style.color = "white";
         document.getElementById("darkModeButton").style.borderColor = "white";
-        document.getElementById("darkModeButton").textContent = "Lightmode";
+        document.getElementById("darkModeButton").textContent = "Darkmode";
         localStorage.setItem("currentColor","black");
     }
     else if(currentColor.includes("black")){
@@ -90,7 +92,7 @@ function switchColorMode(currentColor){
          document.getElementById("logoBig").src = "logo.PNG";
          document.getElementById("darkModeButton").style.color = "black";
          document.getElementById("darkModeButton").style.borderColor = "black";
-         document.getElementById("darkModeButton").textContent = "Darkmode";
+         document.getElementById("darkModeButton").textContent = "Lightmode";
          localStorage.setItem("currentColor","white");
     }
     
