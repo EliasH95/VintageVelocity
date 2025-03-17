@@ -189,7 +189,7 @@ async function buildMemberDivs(){
 
         const img = document.createElement("img");
         img.src = member.ImgPath;
-        img.style.height = "350px";
+        img.style.width = "250px";
         memberDiv.appendChild(img);
 
         const tiktokLink = document.createElement("span");

@@ -42,6 +42,13 @@
         "ConstYear": "1988",
         "ImgPath": "stuhli_honda-450.jpg",
         "Type": "Moped"
-        }
+        },
+        {
+            "Owner": "Fabian",
+            "Model": "Mercedes W124 320E",
+            "ConstYear": "1993",
+            "ImgPath": "fabian_w124.png",
+            "Type": "Car"
+            }
     ]
 }
