@@ -2,9 +2,14 @@
     "news":
     [
         {
+            "Title": "Neues Mitglied!",
+            "Description": "Ab sofort bereichert uns Fabian mit seinem Mercedes W124!",
+            "ImgPath": "fabian_w124.png"
+        },
+        {
             "Title": "Ausfahrt zum Attersee im Juni 2025",
             "Description": "Über 200km; 4 Fahrer; 3 Tage Ausflug;",
-            "ImgPath": "attersee.jpg"
+            "ImgPath": "attersee.png"
         }
     ]
 }
