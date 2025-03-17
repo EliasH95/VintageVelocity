@@ -1,7 +1,7 @@
 {"members":
  [
     {
-        "ImgPath":"elias.jpg" ,
+        "ImgPath":"elias.png" ,
         "Name": "LADITSCH",
         "Birthdate": "04-09-2007",
         "Nationality": "Österreich",
@@ -10,7 +10,7 @@
         "TiktokLink": "https://www.tiktok.com/@vintagevelocity2024/video/7441998160748121377"
     },
     {
-        "ImgPath": "Lasse.jpg",
+        "ImgPath": "Lasse.png",
         "Name": "LASSE",
         "Birthdate": "03-17-2007",
         "Nationality": "Deutschland",
@@ -28,7 +28,7 @@
         "TiktokLink": "https://www.tiktok.com/@vintagevelocity2024/video/7440959563278372128"
     },
     {
-        "ImgPath": "stuhli.jpg",
+        "ImgPath": "stuhli.png",
         "Name": "STUHLI",
         "Birthdate": "00-26-2004",
         "Nationality": "Österreich",
@@ -37,7 +37,7 @@
         "TiktokLink": "https://www.tiktok.com/@vintagevelocity2024"
     },
     {
-        "ImgPath": "fabian.jpg",
+        "ImgPath": "fabian.png",
         "Name": "FABIAN",
         "Birthdate": "02-09-2005",
         "Nationality": "Österreich",
