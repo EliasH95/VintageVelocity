@@ -2,7 +2,7 @@
     "vehicles":
     [
         {
-            "Owner": "Laditsch",
+            "Owner": "Elias",
             "Model": "Puch AX40 City",
             "ConstYear": "1982",
             "ImgPath": "laditsch_puch-City.png",
@@ -49,6 +49,6 @@
             "ConstYear": "1993",
             "ImgPath": "fabian_w124.png",
             "Type": "Car"
-            }
+        }
     ]
 }
