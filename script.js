@@ -77,22 +77,30 @@ function switchColorMode(currentColor){
     document.body.style.transition = "0.4s"
     if(currentColor.includes("white")){
         document.body.style.background = "black";
-        document.getElementById("homeHeader").style.color = "white";
         document.body.style.color = "white";
         document.getElementById("logoBig").src = "logo_white.png";
         document.getElementById("darkModeButton").style.color = "white";
         document.getElementById("darkModeButton").style.borderColor = "white";
         document.getElementById("darkModeButton").textContent = "Darkmode";
+        document.getElementById("homeHeader").className = "menuP";
+        document.getElementById("membersHeader").className = "menuP";
+        document.getElementById("vehiclesHeader").className = "menuP";
+        document.getElementById("aboutHeader").className = "menuP";
+        document.getElementById("impressumHeader").className = "menuP";
         localStorage.setItem("currentColor","black");
     }
     else if(currentColor.includes("black")){
          document.body.style.background = "white";
          document.body.style.color = "black";
-         document.getElementById("homeHeader").style.color = "black";
          document.getElementById("logoBig").src = "logo.PNG";
          document.getElementById("darkModeButton").style.color = "black";
          document.getElementById("darkModeButton").style.borderColor = "black";
          document.getElementById("darkModeButton").textContent = "Lightmode";
+         document.getElementById("homeHeader").className = "menuPWhite";
+         document.getElementById("membersHeader").className = "menuPWhite";
+         document.getElementById("vehiclesHeader").className = "menuPWhite";
+         document.getElementById("aboutHeader").className = "menuPWhite";
+         document.getElementById("impressumHeader").className = "menuPWhite";
          localStorage.setItem("currentColor","white");
     }
     
@@ -190,6 +198,9 @@ async function buildMemberDivs(){
         const img = document.createElement("img");
         img.src = member.ImgPath;
         img.style.width = "250px";
+        img.style.borderStyle = "solid";
+        img.style.borderColor = "black";
+        img.style.borderWidth =  "2px";
         memberDiv.appendChild(img);
 
         const tiktokLink = document.createElement("span");
@@ -199,6 +210,7 @@ async function buildMemberDivs(){
             window.location.href = member.TiktokLink;
         })
         memberDiv.appendChild(tiktokLink);
+
 
         const nameP = document.createElement("p");
             nameP.textContent = member.Name;
