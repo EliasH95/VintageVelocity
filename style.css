@@ -67,22 +67,22 @@ button{
 
 .menuP:nth-of-type(even):hover{
     cursor: pointer;
-    transform: rotate(-2deg);
+    transform: rotate(-2deg) scale(1.1);
     transition: 0.7s;
 }
 .menuP:nth-of-type(odd):hover{
     cursor: pointer;
-    transform: rotate(2deg);
+    transform: rotate(2deg) scale(1.1);
     transition: 0.7s;
 }
 .menuPWhite:nth-of-type(even):hover{
     cursor: pointer;
-    transform: rotate(-2deg);
+    transform: rotate(-2deg) scale(1.1);
     transition: 0.7s;
 }
 .menuPWhite:nth-of-type(odd):hover{
     cursor: pointer;
-    transform: rotate(2deg);
+    transform: rotate(2deg) scale(1.1);
     transition: 0.7s;
 }
 
