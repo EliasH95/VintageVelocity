@@ -108,10 +108,10 @@ button{
 
 }
 .memberDiv:nth-of-type(even):hover{
-    transform: rotate(2deg);
+    transform: rotate(2deg) scale(1.05);
 }
 .memberDiv:nth-of-type(odd):hover{
-    transform: rotate(-2deg);
+    transform: rotate(-2deg) scale(1.05);
 }
 .memberDiv:hover .tiktokLink{
     display: block;
@@ -177,16 +177,13 @@ button{
 }
 .singularNews img{
     border-radius: 10px;
+}
 
-}
-.singularNews:hover{
-    transform: scale(1.05);
-}
 .singularNews:nth-of-type(even):hover{
-    transform: rotate(-2deg);
+    transform: rotate(-2deg) scale(1.05);
 }
 .singularNews:nth-of-type(odd):hover{
-    transform: rotate(2deg);
+    transform: rotate(2deg) scale(1.05);
 }
 
 .singularNews img {
@@ -231,5 +228,6 @@ li{
     transition: 0.3s;
 }
 #lasseLaditschImg:hover{
-    transform: rotate(2deg);
+    transform: rotate(2deg) scale(1.05);
+    margin-bottom: 15px;
 }
