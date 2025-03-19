@@ -81,12 +81,14 @@ function switchColorMode(currentColor){
         document.getElementById("logoBig").src = "logo_white.png";
         document.getElementById("darkModeButton").style.color = "white";
         document.getElementById("darkModeButton").style.borderColor = "white";
-        document.getElementById("darkModeButton").textContent = "Darkmode";
+        document.getElementById("darkModeButton").src = "darkmode.png";
         document.getElementById("homeHeader").className = "menuP";
         document.getElementById("membersHeader").className = "menuP";
         document.getElementById("vehiclesHeader").className = "menuP";
         document.getElementById("aboutHeader").className = "menuP";
         document.getElementById("impressumHeader").className = "menuP";
+        document.getElementById("instagram").src = "instagramWhite.png";
+        document.getElementById("tiktok").src = "tiktok2White.png";
         localStorage.setItem("currentColor","black");
     }
     else if(currentColor.includes("black")){
@@ -95,12 +97,14 @@ function switchColorMode(currentColor){
          document.getElementById("logoBig").src = "logo.PNG";
          document.getElementById("darkModeButton").style.color = "black";
          document.getElementById("darkModeButton").style.borderColor = "black";
-         document.getElementById("darkModeButton").textContent = "Lightmode";
+         document.getElementById("darkModeButton").src = "lightmode.png";
          document.getElementById("homeHeader").className = "menuPWhite";
          document.getElementById("membersHeader").className = "menuPWhite";
          document.getElementById("vehiclesHeader").className = "menuPWhite";
          document.getElementById("aboutHeader").className = "menuPWhite";
          document.getElementById("impressumHeader").className = "menuPWhite";
+         document.getElementById("instagram").src = "instagram.webp";
+         document.getElementById("tiktok").src = "tiktok2.png";
          localStorage.setItem("currentColor","white");
     }
     
@@ -204,7 +208,7 @@ async function buildMemberDivs(){
         memberDiv.appendChild(img);
 
         const tiktokLink = document.createElement("span");
-        tiktokLink.textContent = "Zum Vorstellungsvideo";
+        tiktokLink.textContent = "Mehr zu " + String(member.Name).charAt(0).toUpperCase() + member.Name.slice(1).toLowerCase();
         tiktokLink.className = "tiktokLink";
         memberDiv.addEventListener("click",()=>{
             window.location.href = member.TiktokLink;

@@ -62,28 +62,35 @@ button{
     margin: 20px;
     font-family: BodyFont;
     padding: 10px;
+    transition: 0.7s;
 }
 
-.menuP:hover{
-    background-color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.menuP:nth-of-type(even):hover{
     cursor: pointer;
-    color: black;
+    transform: rotate(-2deg);
+    transition: 0.7s;
 }
-
-.menuPWhite:hover{
-    background-color: black;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.menuP:nth-of-type(odd):hover{
     cursor: pointer;
-    color: white;
+    transform: rotate(2deg);
+    transition: 0.7s;
+}
+.menuPWhite:nth-of-type(even):hover{
+    cursor: pointer;
+    transform: rotate(-2deg);
+    transition: 0.7s;
+}
+.menuPWhite:nth-of-type(odd):hover{
+    cursor: pointer;
+    transform: rotate(2deg);
+    transition: 0.7s;
 }
 
 .menuPWhite{
     margin: 20px;
     font-family: BodyFont;
     padding: 10px;
+    transition: 0.7s;
 }
 
 .memberDiv{
@@ -99,17 +106,14 @@ button{
     transition: 0.5s;
 }
 .memberDiv:hover{
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(203,203,203,1) 53%, rgba(166,166,166,1) 100%, rgba(105,105,105,1) 100%);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     cursor: pointer;
-    transition: 0.7s;
-    transform: scale(1.05);
+    transition: 0.3s;
     border-color: white;
     color: transparent; 
 }
 .memberDiv:hover .tiktokLink{
     display: block;
-    color: black;
 }
 .memberDiv .img{
     width: 100%;
@@ -118,6 +122,9 @@ button{
     border-style: solid;
     border-color: black;
     border-width: 2px;
+}
+.memberDiv:hover p{
+    margin: 0.5px;
 }
 .vehicleDiv{
     border-style:solid; 
@@ -159,9 +166,32 @@ button{
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.singularNews:hover{
+}
+
 .singularNews img {
     width: 100%;
 }
 li{
     font-family: BodyFont;
 }
+#darkModeButton{
+    transition: 1s;
+}
+#darkModeButton:hover{
+    transition: 1s;
+    transform: rotate(90deg);
+}
+
+.socialButton{
+    transition: .7s;
+}
+.socialButton:nth-of-type(odd):hover {
+    transform: rotate(-10deg) scale(1.2);
+}
+
+.socialButton:nth-of-type(even):hover {
+    transform: rotate(10deg) scale(1.2);
+}
+
+
