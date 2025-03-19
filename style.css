@@ -102,7 +102,16 @@ button{
     cursor: pointer;
     transition: 0.3s;
     border-color: white;
+}
+.memberDiv:hover p{
     color: transparent; 
+
+}
+.memberDiv:nth-of-type(even):hover{
+    transform: rotate(2deg);
+}
+.memberDiv:nth-of-type(odd):hover{
+    transform: rotate(-2deg);
 }
 .memberDiv:hover .tiktokLink{
     display: block;
@@ -146,7 +155,6 @@ button{
 }
 
 .tiktokLink{
-    color: white;
     display: none;
 }
 .newsDiv{

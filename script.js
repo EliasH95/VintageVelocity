@@ -93,8 +93,7 @@ function switchColorMode(currentColor){
     }
     else if(currentColor.includes("black")){
          document.body.style.background = "white";
-         document.body.style.color = "black";
-         document.getElementById("logoBig").src = "logo.PNG";
+         document.body.style.color = "black";         
          document.getElementById("darkModeButton").style.color = "black";
          document.getElementById("darkModeButton").style.borderColor = "black";
          document.getElementById("darkModeButton").src = "lightmode.png";
@@ -209,6 +208,7 @@ async function buildMemberDivs(){
 
         const tiktokLink = document.createElement("span");
         tiktokLink.textContent = "Mehr zu " + String(member.Name).charAt(0).toUpperCase() + member.Name.slice(1).toLowerCase();
+        tiktokLink.id = "tiktokLink";
         tiktokLink.className = "tiktokLink";
         memberDiv.addEventListener("click",()=>{
             window.location.href = member.TiktokLink;
