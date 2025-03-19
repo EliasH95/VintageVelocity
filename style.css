@@ -8,6 +8,7 @@ h1,h2,h3{
 
 h1:hover,h2:hover,h3:hover{
     transform: scale(1.05);
+    font-weight: bold;
 }
 p{
     font-family:BodyFont;
