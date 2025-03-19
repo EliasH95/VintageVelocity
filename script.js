@@ -95,7 +95,7 @@ function switchColorMode(currentColor){
          document.body.style.background = "white";
          document.body.style.color = "black";         
          document.getElementById("darkModeButton").style.color = "black";
-         document.getElementById("logoBig").src = "logo.png";
+         document.getElementById("logoBig").src = "logo.PNG";
          document.getElementById("darkModeButton").style.borderColor = "black";
          document.getElementById("darkModeButton").src = "lightmode.png";
          document.getElementById("homeHeader").className = "menuPWhite";
