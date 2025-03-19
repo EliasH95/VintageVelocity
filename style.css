@@ -168,6 +168,13 @@ button{
 }
 
 .singularNews:hover{
+    transform: scale(1.05);
+}
+.singularNews:nth-of-type(even):hover{
+    transform: rotate(-2deg);
+}
+.singularNews:nth-of-type(odd):hover{
+    transform: rotate(2deg);
 }
 
 .singularNews img {
