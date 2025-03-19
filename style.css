@@ -124,7 +124,7 @@ button{
     border-width: 2px;
 }
 .memberDiv:hover p{
-    margin: 0.5px;
+    margin: 1px;
 }
 .vehicleDiv{
     border-style:solid; 
@@ -192,6 +192,13 @@ li{
 
 .socialButton:nth-of-type(even):hover {
     transform: rotate(10deg) scale(1.2);
+}
+
+.socialsDiv{
+    display: flex; 
+    align-items: center; 
+    border-bottom-style: solid; 
+    justify-content: center;
 }
 
 
