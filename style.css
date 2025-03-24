@@ -233,10 +233,21 @@ li{
     margin-bottom: 15px;
 }
 
-.emailDiv span {
+.emailDiv p {
     display: none; /* Hide the text by default */
 }
 
-.emailDiv:hover span {
-    display: block; /* Show the text when the parent is hovered */
+.emailDiv:hover p {
+    display: block;
+}
+
+#copyInfo{
+    font-size: 12px;
+    margin-top: 5px;
+    border-bottom-style: solid;
+    width: fit-content;
+}
+
+#emailA{
+    cursor: pointer;
 }

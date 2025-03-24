@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     buildNews();
     
+
+    document.getElementById("emailA").addEventListener("mouseleave",()=>{
+        const copyInfo = document.getElementById("copyInfo");
+        copyInfo.innerText = "klicke um zu kopieren!";
+    })
     //yes, this throws an error when the page is not the index.html, but otherwise,
     //the fucking news won't be loaded when the site is opened
   
@@ -249,9 +254,9 @@ async function buildMemberDivs(){
             ageP.textContent = age;
             memberDiv.appendChild(ageP);
 
-        const nationP = document.createElement("p");
-            nationP.textContent = member.Nationality;
-            memberDiv.appendChild(nationP);
+        // const nationP = document.createElement("p");
+        //     nationP.textContent = member.Nationality;
+        //     memberDiv.appendChild(nationP);
 
         const joinedP = document.createElement("p");
             joinedP.textContent = member.Joined;
@@ -266,6 +271,7 @@ async function buildMemberDivs(){
             vorstandDiv.append(memberDiv) :
              regularMemberDiv.append(memberDiv);
     });
+   
 }
 
 function copyToClipboard(text){
@@ -280,7 +286,10 @@ function copyToClipboard(text){
     // Remove the temporary element
     document.body.removeChild(textarea);
 
-    alert("Text copied: " + text); // Optional: notify the user
+   const copyInfo = document.getElementById("copyInfo");
+   copyInfo.innerText = "E-Mail Adresse kopiert!";
 }
+
+
 
 
