@@ -1,0 +1,19 @@
+{
+"vehicles":
+[
+    {
+        "Owner": "Gregor",
+        "Model": "KTM Ponny 2 Super 4",
+        "ConstYear": "1970",
+        "ImgPath": "gregor_ponny-project.png",
+        "Type": "Moped"
+    },
+    {
+        "Owner": "Stuhli",
+        "Model": "Sachs Taxi",
+        "ConstYear": "1982",
+        "ImgPath": "stuhli_sachs-project.png",
+        "Type": "Moped"
+    }
+]
+}

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     })
 
     if(window.location.href.includes("vehicles")){
-        buildVehicles();
+        buildVehicles("vehicles.json");
     }
     const membersHeader = document.getElementById("membersHeader");
 
@@ -61,10 +61,20 @@ document.addEventListener("DOMContentLoaded",()=>{
     const vehiclesHeader = document.getElementById("vehiclesHeader");
     
     vehiclesHeader.addEventListener("click",(event) =>{
-        window.location = "vehicles.html"
-        buildVehicles();
+        window.location = "vehicles.html";
+    })
+
+    
+    const projectsHeader = document.getElementById("projectsHeader");
+
+    projectsHeader.addEventListener("click",(event) =>{
+        window.location = "projects.html";
+    })
+
+    if(window.location.href.includes("projects")){
+        buildVehicles("projects.json");
     }
-    )
+
 
     if(window.location.href.includes("members")){
         vorstandDiv = document.getElementById("executivesDiv");
@@ -111,12 +121,13 @@ function switchColorMode(currentColor){
 }
 
 async function loadJson(path){
+    console.log(path)
     const response = await fetch(path);
     const json = await response.json();
     return json;
 }
 
-async function buildVehicles(){
+async function buildVehicles(jsonPath){
     const mopedDiv = document.getElementById("mopedDiv");
     const carDiv = document.getElementById("carDiv");
     const restVehiclesDiv = document.getElementById("restVehiclesDiv");
@@ -124,9 +135,9 @@ async function buildVehicles(){
     const mopedH2 = document.getElementById("mopedsH2");
     const carH2 = document.getElementById("carsH2");
     const restH2 = document.getElementById("restH2");
+    console.log(jsonPath);
 
-
-    const vehicles = await loadJson("vehicles.json");
+    const vehicles = await loadJson(jsonPath);
 
     Array.from(vehicles.vehicles).forEach(vehicle =>{
         const vehicleDiv = document.createElement("div");
@@ -257,5 +268,19 @@ async function buildMemberDivs(){
     });
 }
 
+function copyToClipboard(text){
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+
+    // Select the text and copy it to clipboard
+    textarea.select();
+    document.execCommand("copy");
+
+    // Remove the temporary element
+    document.body.removeChild(textarea);
+
+    alert("Text copied: " + text); // Optional: notify the user
+}
 
 

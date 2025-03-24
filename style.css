@@ -232,3 +232,11 @@ li{
     transform: rotate(2deg) scale(1.05);
     margin-bottom: 15px;
 }
+
+.emailDiv span {
+    display: none; /* Hide the text by default */
+}
+
+.emailDiv:hover span {
+    display: block; /* Show the text when the parent is hovered */
+}
