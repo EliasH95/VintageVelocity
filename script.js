@@ -10,10 +10,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     buildNews();
     
 
-    document.getElementById("emailA").addEventListener("mouseleave",()=>{
-        const copyInfo = document.getElementById("copyInfo");
-        copyInfo.innerText = "klicke um zu kopieren!";
-    })
+    if(window.location.href.includes("about")){
+        document.getElementById("emailA").addEventListener("mouseleave",()=>{
+            const copyInfo = document.getElementById("copyInfo");
+            copyInfo.innerText = "klicke um zu kopieren!";
+        })
+    }
+   
     //yes, this throws an error when the page is not the index.html, but otherwise,
     //the fucking news won't be loaded when the site is opened
   
