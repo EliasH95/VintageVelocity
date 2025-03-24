@@ -9,13 +9,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     buildNews();
     
-
-    if(window.location.href.includes("about")){
-        document.getElementById("emailA").addEventListener("mouseleave",()=>{
-            const copyInfo = document.getElementById("copyInfo");
-            copyInfo.innerText = "klicke um zu kopieren!";
-        })
-    }
    
     //yes, this throws an error when the page is not the index.html, but otherwise,
     //the fucking news won't be loaded when the site is opened
@@ -278,6 +271,7 @@ async function buildMemberDivs(){
 }
 
 function copyToClipboard(text){
+    window.location.href = "mailto:vintagevelocity24@gmail.com?subject=&body=";
     const textarea = document.createElement("textarea");
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -288,9 +282,6 @@ function copyToClipboard(text){
 
     // Remove the temporary element
     document.body.removeChild(textarea);
-
-   const copyInfo = document.getElementById("copyInfo");
-   copyInfo.innerText = "E-Mail Adresse kopiert!";
 }
 
 
